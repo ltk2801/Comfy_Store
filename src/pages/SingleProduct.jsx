@@ -25,7 +25,7 @@ const SingleProduct = () => {
   return (
     <section>
       {/* Breadcrumbs */}
-      <div className="text-md breadcrumbs">
+      <div className="text-base breadcrumbs">
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -53,7 +53,7 @@ const SingleProduct = () => {
           <p className="mt-6 leading-8">{description}</p>
           {/* COLOR */}
           <div className="mt-6">
-            <h4 className="text-md font-medium tracking-wider capitalize">
+            <h4 className="text-base font-medium tracking-wider capitalize">
               colors
             </h4>
             <div className="mt-2">
@@ -75,7 +75,7 @@ const SingleProduct = () => {
           {/* Amount */}
           <div className="form-control w-full max-w-xs">
             <label className="label" htmlFor="amount">
-              <h4 className="text-md font-medium tracking-wider capitalize">
+              <h4 className="text-base font-medium tracking-wider capitalize">
                 amount
               </h4>
             </label>

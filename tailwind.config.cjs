@@ -6,6 +6,14 @@ export default {
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
   daisyui: {
-    themes: ["winter", "dracula"],
+    themes: [
+      {
+        cupcake: {
+          ...require("daisyui/src/theming/themes")["[data-theme=cupcake]"],
+          neutral: "#97a2b2",
+        },
+      },
+      "dracula",
+    ],
   },
 };

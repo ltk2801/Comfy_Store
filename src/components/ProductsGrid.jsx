@@ -24,7 +24,9 @@ const ProductsGrid = () => {
             </figure>
             <div className="card-body items-center text-center">
               <h2 className="card-title capitalize tracking-wider">{title}</h2>
-              <span className="text-secondary">{FormatPrice(price)}</span>
+              <span className="text-secondary font-bold">
+                {FormatPrice(price)}
+              </span>
             </div>
           </Link>
         );

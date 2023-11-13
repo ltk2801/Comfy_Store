@@ -6,20 +6,20 @@ import { NavLink } from "react-router-dom";
 import NavLinks from "./NavLinks";
 
 const themes = {
-  winter: "winter",
+  cupcake: "cupcake",
   dracula: "dracula",
 };
 
 const getThemeFromLocalStorage = () => {
-  return localStorage.getItem("theme") || themes.winter;
+  return localStorage.getItem("theme") || themes.cupcake;
 };
 
 const Navbar = () => {
   const [theme, setTheme] = useState(getThemeFromLocalStorage());
 
   const handleTheme = () => {
-    const { winter, dracula } = themes;
-    const newTheme = theme === winter ? dracula : winter;
+    const { cupcake, dracula } = themes;
+    const newTheme = theme === cupcake ? dracula : cupcake;
     setTheme(newTheme);
   };
 
