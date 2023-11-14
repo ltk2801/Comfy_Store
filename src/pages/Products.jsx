@@ -1,4 +1,3 @@
-import { useLoaderData } from "react-router-dom";
 import { Filters, PaginationContainer, ProductsContainer } from "../components";
 import { Axios } from "../utils";
 

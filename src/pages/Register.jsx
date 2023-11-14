@@ -1,5 +1,27 @@
 import { FormInput, SubmitBtn } from "../components";
-import { Form, Link } from "react-router-dom";
+import { Form, Link, redirect } from "react-router-dom";
+import { Axios } from "../utils";
+import { toast } from "react-toastify";
+
+export const action = async ({ request }) => {
+  const formData = await request.formData();
+  const data = Object.fromEntries(formData);
+
+  console.log(data);
+  try {
+    const response = await Axios.post("/auth/local/register", data);
+    console.log(response);
+    toast.success("account created successfully");
+    return redirect("/login");
+  } catch (error) {
+    console.log(error);
+    const errorMessage =
+      error?.response?.data?.error?.message ||
+      "Please double check your credentials";
+    toast.error(errorMessage);
+    return null;
+  }
+};
 
 const Register = () => {
   return (
