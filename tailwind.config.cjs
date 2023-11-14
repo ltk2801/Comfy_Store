@@ -11,9 +11,21 @@ export default {
         cupcake: {
           ...require("daisyui/src/theming/themes")["[data-theme=cupcake]"],
           neutral: "#97a2b2",
+          ".btn-pagination-hover": {
+            "background-color": "#65b6ba",
+            "border-color": "#65b6ba",
+          },
         },
       },
-      "dracula",
+      {
+        dracula: {
+          ...require("daisyui/src/theming/themes")["[data-theme=dracula]"],
+          ".btn-pagination-hover": {
+            "background-color": "#d66da8",
+            "border-color": "#d66da8",
+          },
+        },
+      },
     ],
   },
 };

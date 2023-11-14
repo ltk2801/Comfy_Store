@@ -14,3 +14,5 @@ export { default as ProductsContainer } from "./ProductsContainer";
 export { default as FormSelect } from "./Form/FormSelect";
 export { default as FormRange } from "./Form/FormRange";
 export { default as FormCheckbox } from "./Form/FormCheckbox";
+
+export { default as Loading } from "./Loading";

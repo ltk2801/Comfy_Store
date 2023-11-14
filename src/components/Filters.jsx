@@ -5,7 +5,8 @@ import FormRange from "./Form/FormRange";
 import FormSelect from "./Form/FormSelect";
 
 const Filters = () => {
-  const { meta } = useLoaderData();
+  const { meta, params } = useLoaderData();
+  const { search, company, category, shipping, order, price } = params;
   const { companies, categories } = meta;
 
   return (
@@ -16,6 +17,7 @@ const Filters = () => {
         label="search product"
         name="search"
         size="input-sm"
+        defaultValue={search}
       />
       {/* CATEGORIES */}
       <FormSelect
@@ -23,6 +25,7 @@ const Filters = () => {
         name="category"
         list={categories}
         size="select-sm"
+        defaultValue={category}
       />
       {/* COMPANIES */}
       <FormSelect
@@ -30,6 +33,7 @@ const Filters = () => {
         name="company"
         list={companies}
         size="select-sm"
+        defaultValue={company}
       />
       {/* ORDER */}
       <FormSelect
@@ -37,11 +41,22 @@ const Filters = () => {
         name="order"
         list={["a-z", "z-a", "high", "low"]}
         size="select-sm"
+        defaultValue={order}
       />
       {/* PRICE */}
-      <FormRange name="price" label="select price" size="range-sm" />
+      <FormRange
+        name="price"
+        label="select price"
+        size="range-sm"
+        price={price}
+      />
       {/* SHIPPING */}
-      <FormCheckbox name="shipping" label="free shiping" size="checkbox-sm" />
+      <FormCheckbox
+        name="shipping"
+        label="free shiping"
+        size="checkbox-sm"
+        defaultValue={shipping}
+      />
       {/* BUTTONS */}
       <button type="submit" className="btn btn-primary btn-sm">
         search
