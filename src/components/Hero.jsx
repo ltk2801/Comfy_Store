@@ -23,7 +23,7 @@ const Hero = () => {
           enjoyable adventure
         </p>
         <div className="mt-10">
-          <Link to="/products" className="btn btn-primary">
+          <Link to="/products" className="btn btn-primary capitalize">
             {" "}
             Our Products{" "}
           </Link>

@@ -8,7 +8,7 @@ const FormInput = ({ label, name, type, defaultValue, size }) => {
         type={type}
         name={name}
         defaultValue={defaultValue || null}
-        className={`input input-bordered capitalize ${size}`}
+        className={`input input-bordered  ${size}`}
       />
     </div>
   );
